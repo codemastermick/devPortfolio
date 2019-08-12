@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./app-theme.scss";
+
+/* for sidenav to take a whole page */
+
+body,
+html {
+  margin: 0;
+  height: 80vh;
+  width: 100vw;
+}
+

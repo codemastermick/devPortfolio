@@ -1,11 +1,18 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule, PreloadAllModules } from "@angular/router";
+import { paths } from "./app-paths";
 
+const routes: Routes = [
+  {
+    path: paths.home,
+    loadChildren: "../app/pages/home/home.module#HomeModule"
+  },
+  { path: "", redirectTo: "/home", pathMatch: "full" }, // Fallback to home if no route is found
 
-const routes: Routes = [];
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
