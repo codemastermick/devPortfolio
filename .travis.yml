@@ -1,0 +1,37 @@
+language: node_js
+cache:
+  directories:
+    - node_modules
+node_js:
+  - stable # ensures we are always on the latest stable for testing
+before_install:
+  - chmod +x .travis/exec_all.sh
+  - .travis/exec_all.sh
+  - .travis/github_login.sh
+install:
+  - npm install -g @angular/cli # install ng cli
+  - npm install -g codecov # install codecov uploader
+  - npm install -g semantic-release # install semantic-release generator
+  - npm install # install project dependencies
+before_script:
+  - .travis/skip_on_readme.sh || travis_terminate 1 # bail out if the only files changes were .md* files
+  - npm run lintonly || travis_terminate 1 # ensure files pass linting
+script:
+  - npm run build:prod || travis_terminate 1 # build the app
+  - npm run test:ci || travis_terminate 1 # run all tests
+after_success:
+  - .travis/generate_changelog.sh # generate a changelog
+  - .travis/push.sh # push the changelog to GitHub
+  - npm run coverage # upload coverage results to Codacy
+  - codecov # upload coverage results to Codecov
+  - rm -rf coverage # remove coverage directory before deploying
+before_deploy:
+  - semantic-release # release a new version semantically
+deploy: # on success, deploy to Firebase hosting
+  skip_cleanup: true
+  provider: firebase
+  token:
+    secure: $FIREBASE_TOKEN # using the token you got from firebase login:ci
+  on:
+    branch: master # if the build was on the master branch
+
