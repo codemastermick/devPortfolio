@@ -1,0 +1,24 @@
+<mat-toolbar class="navbar" color="primary">
+  <div fxHide.gt-sm>
+    <button mat-icon-button (click)="onToggleSidenav()" aria-label="Home">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div>
+    <a routerLink="/home">Home</a>
+  </div>
+  <div fxFlex fxLayout fxLayoutAlign="space-evenly" fxHide.lt-md>
+    <ul fxLayout fxLayoutAlign="space-evenly" fxLayoutGap="10vw" class="navigation-items">
+      <li>
+        <button mat-icon-button>
+          <a routerLink="/about">About Me</a>
+        </button>
+      </li>
+      <li>
+        <button mat-icon-button>
+          <a routerLink="/contact">Contact</a>
+        </button>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>
