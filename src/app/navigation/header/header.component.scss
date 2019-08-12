@@ -1,0 +1,44 @@
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:active,
+a:hover {
+  color: lightgray;
+}
+
+.navigation-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 5%;
+}
+
+mat-toolbar {
+  border-radius: 0px;
+}
+@media (max-width: 959px) {
+  mat-toolbar {
+    border-radius: 0;
+  }
+}
+
+.mat-menu {
+  background-color: grey;
+}
+
+.mat-icon-button {
+  font-size: 20px;
+  line-height: 20px;
+  color: white;
+}
+
+.mat-menu-item > a {
+  color: black;
+}
