@@ -1,44 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./app-theme.scss";
 
-.mat-card {
-  max-width: 80%;
-  margin: 2em auto;
-  text-align: left;
-  width: auto;
-  background-color: rgba(150, 150, 150, 0.7);
-  font-family: "Neuton", serif;
-}
-
-.mat-card-header {
-  font-family: "Neuton", serif;
-}
-
-.mat-card-title {
-  text-align: center;
-  color: black;
-  font-family: "Neuton", serif;
-}
-
-.mat-card-subtitle {
-  font-family: "Neuton", serif;
-}
-
-.mat-card-content {
-  color: black;
-  font-family: "Neuton", serif;
-}
-
-.mat-card-actions {
-  font-family: "Neuton", serif;
-}
-
-.mat-card-footer {
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 2%;
-  font-family: "Neuton", serif;
-}
 /* for sidenav to take a whole page */
 
 body,
@@ -46,58 +8,5 @@ html {
   margin: 0;
   height: 80vh;
   width: 100vw;
-  background-color: black;
-  font-family: "Neuton", serif;
 }
 
-.outside-card {
-  color: whitesmoke;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
-    1px 1px 0 black;
-}
-
-.material-icons-outlined,
-.material-icons.material-icons--outlined,
-.material-icons-two-tone,
-.material-icons.material-icons--two-tone,
-.material-icons-round,
-.material-icons.material-icons--round,
-.material-icons-sharp,
-.material-icons.material-icons--sharp {
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-feature-settings: "liga";
-  -webkit-font-smoothing: antialiased;
-}
-
-.material-icons-outlined,
-.material-icons.material-icons--outlined {
-  font-family: "Material Icons Outlined";
-}
-
-.material-icons-two-tone,
-.material-icons.material-icons--two-tone {
-  font-family: "Material Icons Two Tone";
-}
-
-.material-icons-round,
-.material-icons.material-icons--round {
-  font-family: "Material Icons Round";
-}
-
-.material-icons-sharp,
-.material-icons.material-icons--sharp {
-  font-family: "Material Icons Sharp";
-}
-
-span {
-  font-family: "Neuton", serif;
-}
