@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "target": "codemastermick",
     "public": "dist/devPortfolio",
     "ignore": [
       "firebase.json",

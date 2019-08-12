@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "dev-profile-cd9ed"
+  },
+  "targets": {
+    "dev-profile-cd9ed": {
+      "hosting": {
+        "codemastermick": [
+          "devProfile"
+        ]
+      }
+    }
   }
 }
