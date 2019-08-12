@@ -8,4 +8,4 @@
 echo "Generating CHANGELOG.md. This might take a minute..."
 auto-changelog -p # generate a changelog
 git add -f CHANGELOG.md # add the changelog
-git commit -m "Regenerate changelog: build $TRAVIS_BUILD_NUMBER [skip ci]" # commit to git
+git commit -m "docs: Regenerate changelog: build $TRAVIS_BUILD_NUMBER [skip ci]" # commit to git
