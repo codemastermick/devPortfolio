@@ -34,4 +34,7 @@ deploy: # on success, deploy to Firebase hosting
     secure: $FIREBASE_TOKEN # using the token you got from firebase login:ci
   on:
     branch: master # if the build was on the master branch
-
+notifications:
+  email:
+    on_success: change # default: change
+    on_failure: always # default: always
