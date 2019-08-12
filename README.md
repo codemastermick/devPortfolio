@@ -1,20 +1,20 @@
 # ng devops
 
-[![Travis (.org)](https://img.shields.io/travis/codemastermick/ng-devops)](https://travis-ci.org/codemastermick/ng-devops)
+[![Travis (.org)](https://img.shields.io/travis/codemastermick/devPortfolio)](https://travis-ci.org/codemastermick/devPortfolio)
 [![Website](https://img.shields.io/website/http/dev-profile-cd9ed.web.app?down_color=red&down_message=offline&up_message=up)](https://dev-profile-cd9ed.web.app)
-[![GitHub issues](https://img.shields.io/github/issues/codemastermick/ng-devops)](https://github.com/codemastermick/ng-devops/issues)
+[![GitHub issues](https://img.shields.io/github/issues/codemastermick/devPortfolio)](https://github.com/codemastermick/devPortfolio/issues)
 
-[![codecov](https://codecov.io/gh/codemastermick/ng-devops/branch/master/graph/badge.svg)](https://codecov.io/gh/codemastermick/ng-devops)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b091e9b3211a491bbf949b60dcf2011a)](https://www.codacy.com/app/codemastermick/ng-devops?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=codemastermick/ng-devops&amp;utm_campaign=Badge_Grade)
-[![Maintainability](https://api.codeclimate.com/v1/badges/d17298f06631349f0f8c/maintainability)](https://codeclimate.com/github/codemastermick/ng-devops/maintainability)
-[![Greenkeeper badge](https://badges.greenkeeper.io/codemastermick/ng-devops.svg)](https://greenkeeper.io/)
+[![codecov](https://codecov.io/gh/codemastermick/devPortfolio/branch/master/graph/badge.svg)](https://codecov.io/gh/codemastermick/devPortfolio)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b091e9b3211a491bbf949b60dcf2011a)](https://www.codacy.com/app/codemastermick/devPortfolio?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=codemastermick/devPortfolio&amp;utm_campaign=Badge_Grade)
+[![Maintainability](https://api.codeclimate.com/v1/badges/d17298f06631349f0f8c/maintainability)](https://codeclimate.com/github/codemastermick/devPortfolio/maintainability)
+[![Greenkeeper badge](https://badges.greenkeeper.io/codemastermick/devPortfolio.svg)](https://greenkeeper.io/)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 This project is an Angular 8 app with a focus on making the actual development process easier by leaving all the menial tasks to clever scripts, git hooks and Travis CI
 
 ## Getting Started
 
-To get started with this project you will need to do a few things first to enable all the features of the CI pipeline. For a more detailed explanation of the steps you can check the wiki out on [First Steps](https://github.com/codemastermick/ng-devops/wiki/First-Steps).
+To get started with this project you will need to do a few things first to enable all the features of the CI pipeline. For a more detailed explanation of the steps you can check the wiki out on [First Steps](https://github.com/codemastermick/devPortfolio/wiki/First-Steps).
 
 Create an account with Travis CI if you don't have one, then enable this repository to get started with the basic pipeline.
 
