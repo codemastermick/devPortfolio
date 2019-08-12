@@ -1,28 +1,12 @@
 .footContainer{
   display: flex;
-  justify-content: space-between;
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-.links{
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 0.65em;
-}
-
-.copyright{
-  display: flex;
-  flex-wrap: wrap;
-  text-align: end;
-}
-
-img{
-max-width: 1em;
-}
-
 a{
   color:white;
   text-decoration: none;
+  padding-top: 1em;
 }
