@@ -7,6 +7,10 @@ const routes: Routes = [
     path: paths.home,
     loadChildren: "../app/pages/home/home.module#HomeModule"
   },
+  {
+    path: paths.about,
+    loadChildren: "../app/pages/about/about.module#AboutModule"
+  },
   { path: "", redirectTo: "/home", pathMatch: "full" }, // Fallback to home if no route is found
 
 ];
