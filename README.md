@@ -1,7 +1,7 @@
 # ng devops
 
 [![Travis (.org)](https://img.shields.io/travis/codemastermick/devPortfolio)](https://travis-ci.org/codemastermick/devPortfolio)
-[![Website](https://img.shields.io/website/http/dev-profile-cd9ed.web.app?down_color=red&down_message=offline&up_message=up)](https://dev-profile-cd9ed.web.app)
+[![Website](https://img.shields.io/website/http/codemastermick.web.app?down_color=red&down_message=offline&up_message=up)](https://codemastermick.web.app)
 [![GitHub issues](https://img.shields.io/github/issues/codemastermick/devPortfolio)](https://github.com/codemastermick/devPortfolio/issues)
 
 [![codecov](https://codecov.io/gh/codemastermick/devPortfolio/branch/master/graph/badge.svg)](https://codecov.io/gh/codemastermick/devPortfolio)
