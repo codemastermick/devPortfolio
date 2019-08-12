@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/ng-devops",
+    "public": "dist/devPortfolio",
     "ignore": [
       "firebase.json",
       "**/.*",

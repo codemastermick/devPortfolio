@@ -1,5 +1,5 @@
 {
-  "name": "ng-devops",
+  "name": "devPortfolio",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -11,7 +11,7 @@
     "build-test": "npm run build && npm run test:ci",
     "test": "ng test --code-coverage",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadless --code-coverage",
-    "coverage": "cat coverage/ng-devops/lcov.info | codacy-coverage --username codemastermick --projectName ng-devops",
+    "coverage": "cat coverage/devPortfolio/lcov.info | codacy-coverage --username codemastermick --projectName devPortfolio",
     "lint": "ng lint --fix",
     "lintonly": "ng lint",
     "e2e": "ng e2e",
