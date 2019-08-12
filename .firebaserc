@@ -3,7 +3,7 @@
     "default": "dev-profile-cd9ed"
   },
   "targets": {
-    "codemastermick-8e890": {
+    "dev-profile-cd9ed": {
       "hosting": {
         "portfolio": [
           "codemastermick"
