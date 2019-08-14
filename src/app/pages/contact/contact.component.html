@@ -1,0 +1,23 @@
+<h2>
+  {{tagline}}
+</h2>
+
+<!-- contact form here -->
+<div class="example-container">
+  <mat-form-field>
+    <input matInput placeholder="Enter your name" [formControl]="name" required>
+    <mat-error *ngIf="name.invalid">{{getNameErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Enter your email" [formControl]="email" required>
+    <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Enter your message" [formControl]="message" required>
+    <mat-error *ngIf="message.invalid">{{getMsgErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <button (click)="submit()">Submit</button>
+</div>
