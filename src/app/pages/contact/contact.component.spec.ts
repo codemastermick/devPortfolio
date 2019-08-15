@@ -11,7 +11,7 @@ describe("ContactComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [MaterialModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule],
+      imports: [BrowserAnimationsModule, MaterialModule, FormsModule, ReactiveFormsModule],
       declarations: [ContactComponent]
     }).compileComponents();
   }));
