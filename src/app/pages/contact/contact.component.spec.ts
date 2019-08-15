@@ -2,14 +2,16 @@ import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { ContactComponent } from "./contact.component";
 import { MaterialModule } from "app/material/material.module";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-describe("HomeComponent", () => {
+describe("ContactComponent", () => {
   let component: ContactComponent;
   let fixture: ComponentFixture<ContactComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [MaterialModule],
+      imports: [MaterialModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule],
       declarations: [ContactComponent]
     }).compileComponents();
   }));
