@@ -6,11 +6,12 @@ h1 {
   font-size: 2.5em;
 }
 
-// mat-sidenav-container,
-// mat-sidenav-content,
-// mat-sidenav {
-//   // pick up theme colour here maybe?
-// }
+mat-sidenav-container,
+mat-sidenav-content,
+mat-sidenav {
+  // pick up theme colour here maybe?
+  height: 100%;
+}
 
 mat-sidenav {
   width: 250px;
