@@ -1,21 +1,17 @@
 <div class="container" fxLayout="column">
-  <!-- Header -->
   <div fxLayout fxLayoutAlign="space-between center" class="logoHolder">
     &nbsp; <!-- This is to put a touch of space between the logo and the title -->
     <img src="../assets/logo.webp" alt="Site logo" class="logo" />
     <h1>{{ title }}</h1>
   </div>
   <mat-sidenav-container class="mainpage">
-    <!-- nav panel here -->
     <mat-sidenav #sidenav role="navigation">
       <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
     </mat-sidenav>
     <mat-sidenav-content class="bgimg">
       <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
-      <!-- Page body -->
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
-  <!-- Footer -->
   <app-footer [foundingYear]="foundingYear" [author]="author" fxFlexOffset="auto"></app-footer>
 </div>
