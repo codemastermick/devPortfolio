@@ -6,11 +6,11 @@ h1 {
   font-size: 2.5em;
 }
 
-mat-sidenav-container,
-mat-sidenav-content,
-mat-sidenav {
-  height: 80%;
-}
+// mat-sidenav-container,
+// mat-sidenav-content,
+// mat-sidenav {
+//   // pick up theme colour here maybe?
+// }
 
 mat-sidenav {
   width: 250px;
@@ -34,7 +34,8 @@ mat-sidenav {
 // }
 
 .mainpage {
-  height: 80vh;
+  height: 80%;
+  overflow: auto;
 }
 
 // .toast-container{
