@@ -6,22 +6,21 @@ import { PathResolveService } from "./shared/path-resolve-service.guard";
 const routes: Routes = [
   {
     path: paths.home,
-    loadChildren: "../app/pages/home/home.module#HomeModule"
+    loadChildren: () => import(`./pages/home/home.module`).then(m => m.HomeModule)
   },
   {
     path: paths.about,
-    loadChildren: "../app/pages/about/about.module#AboutModule"
+    loadChildren: () => import(`./pages/about/about.module`).then(m => m.AboutModule)
   },
   {
     path: paths.contact,
-    loadChildren: "../app/pages/contact/contact.module#ContactModule"
+    loadChildren: () => import(`./pages/contact/contact.module`).then(m => m.ContactModule)
   },
   { path: "", redirectTo: "/home", pathMatch: "full" }, // Fallback to home if no route is found
   {
     path: "**",
     resolve: { path: PathResolveService },
-    loadChildren:
-      "../app/pages/errors/not-found/not-found.module#NotFoundModule"
+    loadChildren: () => import(`./pages/errors/not-found/not-found.module`).then(m => m.NotFoundModule)
   }
 ];
 
