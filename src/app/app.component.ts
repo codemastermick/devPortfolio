@@ -6,7 +6,7 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-  title = "Codemaster Mick's portfolio";
+  title = "Welcome to the Codemaster's Den";
   foundingYear = 2019; // replace with this year
   author = "Mick Evans"; // your name or your company name
 }
