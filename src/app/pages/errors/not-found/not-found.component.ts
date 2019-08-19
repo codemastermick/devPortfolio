@@ -2,7 +2,13 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { take } from "rxjs/operators";
 
-const errors = ["Page not found", "Something went wrong", "It broke!"]; // Add more error messages if desired
+const errors = [
+  "Page not found",
+  "Something went wrong",
+  "It broke!",
+  "Whoops!",
+  "There may be a typo here..."
+]; // Add more error messages if desired
 
 @Component({
   selector: "app-not-found",
@@ -13,7 +19,7 @@ export class NotFoundComponent implements OnInit {
   errorMsg: string; // Error message displayed to the user
   path: string; // Path the user might be trying to navigate to
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.errorMsg = errors[Math.floor(Math.random() * errors.length)];
