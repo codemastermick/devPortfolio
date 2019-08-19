@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 import { FooterComponent } from "./footer.component";
-import { MaterialModule } from "app/material/material.module";
+import { MaterialModule } from "app/shared/material.module";
 import { RouterTestingModule } from "@angular/router/testing";
 
 describe("FooterComponent", () => {

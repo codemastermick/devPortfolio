@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 import { NotFoundComponent } from "./not-found.component";
-import { MaterialModule } from "app/material/material.module";
+import { MaterialModule } from "app/shared/material.module";
 import { NotFoundRoutingModule } from "./not-found-routing,module";
 import { RouterTestingModule } from "@angular/router/testing";
 import { By } from "@angular/platform-browser";

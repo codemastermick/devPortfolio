@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { ContactComponent } from "./contact.component";
-import { MaterialModule } from "app/material/material.module";
+import { MaterialModule } from "app/shared/material.module";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 

@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 import { HeaderComponent } from "./header.component";
-import { MaterialModule } from "app/material/material.module";
+import { MaterialModule } from "app/shared/material.module";
 import { RouterTestingModule } from "@angular/router/testing";
 import { SidenavListComponent } from "../sidenav-list/sidenav-list.component";
 

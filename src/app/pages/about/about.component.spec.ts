@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { AboutComponent } from "./about.component";
-import { MaterialModule } from "app/material/material.module";
+import { MaterialModule } from "app/shared/material.module";
 
 describe("HomeComponent", () => {
   let component: AboutComponent;
