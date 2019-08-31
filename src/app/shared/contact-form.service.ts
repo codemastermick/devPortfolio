@@ -20,10 +20,10 @@ export class ContactFormService {
     if (name && email && message) {
       console.log(`${name} at ${email} would like to talk to you about ${message}`);
       this.http.put(this.ENDPOINT, body).toPromise().then(res => {
-        console.log(`Uploaded message with UID ${res}`);
+        console.log(`Uploaded message with UID ${JSON.stringify(res)}`);
       }).catch(err => {
         console.log(err);
-      })
+      });
     } else {
       console.log("Could not upload message");
     }
