@@ -4,7 +4,8 @@ import { ContactComponent } from "./contact.component";
 import { MaterialModule } from "app/shared/material.module";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
+import { ContactFormService } from "app/shared/contact-form.service";
 
 const mock = {
   name: "Demo Bob",
@@ -24,17 +25,26 @@ const badMock = {
 describe("ContactComponent", () => {
   let component: ContactComponent;
   let fixture: ComponentFixture<ContactComponent>;
+  // tslint:disable-next-line: prefer-const
+  let service: ContactFormService;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [BrowserAnimationsModule, MaterialModule, FormsModule, ReactiveFormsModule, HttpClientModule],
-      declarations: [ContactComponent]
+      imports: [
+        BrowserAnimationsModule,
+        MaterialModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientTestingModule],
+      declarations: [ContactComponent],
+      providers: [ContactFormService]
     }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ContactComponent);
     component = fixture.componentInstance;
+    service = TestBed.get(ContactFormService);
     fixture.detectChanges();
   });
 
@@ -58,13 +68,18 @@ describe("ContactComponent", () => {
     expect(component.message.valid).toBeFalsy();
   });
 
-  // it("should submit a filled form", () => {
-  //   component.name.setValue(mock.name);
-  //   component.email.setValue(mock.email);
-  //   component.message.setValue(mock.message);
-  //   fixture.detectChanges();
-  //   expect(component.getNameErrorMessage()).toEqual("");
-  // });
+  it("should submit a filled form", () => {
+    component.name.setValue(mock.name);
+    component.email.setValue(mock.email);
+    component.message.setValue(mock.message);
+
+    spyOn(service, "uploadMessage");
+
+    component.submit();
+    fixture.detectChanges();
+
+    expect(service.uploadMessage).toHaveBeenCalled();
+  });
 
   // BEGIN NAME TESTS
   it("should error without a name", () => {
