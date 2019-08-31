@@ -38,20 +38,17 @@ export class ContactComponent implements OnInit {
 
   getNameErrorMessage() {
     return this.name.hasError("required") ? "You must enter a name so I know who I am talking to" :
-      this.name.hasError("name") ? "Not a valid email" :
-        "";
+      this.name.hasError("name") ? "Not a valid email" : "";
   }
 
   getEmailErrorMessage() {
-    return this.email.hasError("required") ? "You must enter an email address" :
-      this.email.hasError("email") ? "Not a valid email" :
-        "";
+    return this.email.hasError("required") ? "You must enter an email address or I won't be able to get back to you" :
+      this.email.hasError("email") ? "Not a valid email" : "";
   }
 
   getMsgErrorMessage() {
     return this.message.hasError("required") ? "You must enter a message so I know what you need" :
-      this.message.hasError("message") ? "Not a valid email" :
-        "";
+      this.message.hasError("message") ? "Not a valid email" : "";
   }
 
   forgeMessage() {
