@@ -9,10 +9,10 @@ const mailTransport = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     type: "OAuth2",
-    user: 'codemastermick@gmail.com',
-    clientId: "584777788367-vkhjv5gfnq0n8n3jucj7pjrvt3cu7oa0.apps.googleusercontent.com",
-    clientSecret: "fglHBL9U1a3E0hgDY5W8nEvc",
-    refreshToken: "1/92ObjNPY48bKAo5VGq2YqTxbV9jjh1QSJzm0OpjDDzkrEO0s-mCTTmyy9hkXgLC9"
+    user: functions.config().mailer.user,
+    clientId: functions.config().mailer.id,
+    clientSecret: functions.config().mailer.secret,
+    refreshToken: functions.config().mailer.token
   },
 });
 
