@@ -11,4 +11,3 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 This is the code repository for my personal website. Included is the client side web app as well as the backend functions for interacting with Firestore and sending emails using the contact form.
-
