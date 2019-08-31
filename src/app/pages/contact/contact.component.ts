@@ -48,22 +48,24 @@ export class ContactComponent implements OnInit {
   getNameErrorMessage() {
     return this.name.hasError("required") ? "You must enter a name so I know who I am talking to" :
       this.name.hasError("pattern") ? "You have entered an invalid character" :
-        this.name.hasError("minlength") ? "Please enter a name that is at least 2 characters" : "";
+        this.name.hasError("minlength") ? "Please enter a name that is at least 2 characters" :
+          "";
   }
 
   getEmailErrorMessage() {
     return this.email.hasError("required") ? "You must enter an email address or I won't be able to get back to you" :
-      this.email.hasError("email") ? "Not a valid email address" : "";
+      this.email.hasError("email") ? "Not a valid email address" :
+        "";
   }
 
   getMsgErrorMessage() {
     return this.message.hasError("required") ? "You must enter a message so I know what you need" :
       this.message.hasError("minlength") ? "Please enter at least 20 characters for your message" :
-        this.message.hasError("maxlength") ? "Message too long. Maximum 1000 characters" : "";
+        this.message.hasError("maxlength") ? "Message too long. Maximum 1000 characters" :
+          "";
   }
 
   submit() {
     this.contact.uploadMessage(this.name.value, this.email.value, this.message.value);
   }
-
 }
