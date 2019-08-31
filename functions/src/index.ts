@@ -2,6 +2,7 @@ import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 import * as express from "express";
 import * as cors from "cors";
+import { DocumentSnapshot } from 'firebase-functions/lib/providers/firestore';
 
 const nodemailer = require('nodemailer');
 const mailTransport = nodemailer.createTransport({
@@ -10,7 +11,7 @@ const mailTransport = nodemailer.createTransport({
     type: "OAuth2",
     user: 'codemastermick@gmail.com',
     clientId: "584777788367-vkhjv5gfnq0n8n3jucj7pjrvt3cu7oa0.apps.googleusercontent.com",
-    clientSecret:"fglHBL9U1a3E0hgDY5W8nEvc",
+    clientSecret: "fglHBL9U1a3E0hgDY5W8nEvc",
     refreshToken: "1/92ObjNPY48bKAo5VGq2YqTxbV9jjh1QSJzm0OpjDDzkrEO0s-mCTTmyy9hkXgLC9"
   },
 });
@@ -33,12 +34,11 @@ export const api = functions.https.onRequest(app);
 exports.alerter = functions.firestore
   .document("messages/{msgID}")
   .onCreate(async (change, context) => {
-    // run nodemailer here
     const mailOptions = {
-      from: `"${change.get("name")}" ${change.get("email")}`,
+      from: `"Job Bot" ${change.get("email")}`,
       to: "codemastermick@gmail.com",
       subject: "!WORK REQUEST!",
-      text: change.get("message")
+      text: formatMessageBody(change)
     };
 
     try {
@@ -49,3 +49,10 @@ exports.alerter = functions.firestore
     }
     return null;
   });
+
+function formatMessageBody(change: DocumentSnapshot) {
+  return `${change.get("message")}
+
+${change.get("name")} ${change.get("email")}
+`;
+}
