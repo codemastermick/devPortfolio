@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
 import { Title, Meta } from "@angular/platform-browser";
 import { FormControl, Validators } from "@angular/forms";
+import { ContactFormService } from "app/shared/contact-form.service";
 
 const taglines = [
   "Lets talk",
@@ -20,7 +21,7 @@ export class ContactComponent implements OnInit {
   name = new FormControl("", [Validators.required]);
   email = new FormControl("", [Validators.required, Validators.email]);
   message = new FormControl("", [Validators.required]);
-  constructor(private titleService: Title, private metaTagService: Meta) { }
+  constructor(private titleService: Title, private metaTagService: Meta, private contact: ContactFormService) { }
 
   ngOnInit() {
     this.titleService.setTitle("Contact Codemaster Mick");
@@ -51,12 +52,8 @@ export class ContactComponent implements OnInit {
       this.message.hasError("message") ? "Not a valid email" : "";
   }
 
-  forgeMessage() {
-    console.log(this.name.value + " at " + this.email.value + " would like to talk to you about " + this.message.value);
-  }
-
   submit() {
-    this.forgeMessage();
+    this.contact.uploadMessage(this.name.value, this.email.value, this.message.value);
   }
 
 }

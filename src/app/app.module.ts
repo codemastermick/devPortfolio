@@ -7,6 +7,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { MaterialModule } from "./shared/material.module";
 import { NavigationModule } from "./navigation/navigation.module";
+import { ContactFormService } from "./shared/contact-form.service";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { NavigationModule } from "./navigation/navigation.module";
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ContactFormService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
