@@ -12,9 +12,9 @@ export class ContactFormService {
 
   uploadMessage(name: string, email: string, message: string) {
     const body = {
-      "name": name,
-      "email": email,
-      "message": message
+      name,
+      email,
+      message
     };
 
     if (name && email && message) {
