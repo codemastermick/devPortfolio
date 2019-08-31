@@ -8,6 +8,7 @@ import { AppComponent } from "./app.component";
 import { MaterialModule } from "./shared/material.module";
 import { NavigationModule } from "./navigation/navigation.module";
 import { ContactFormService } from "./shared/contact-form.service";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContactFormService } from "./shared/contact-form.service";
     MaterialModule,
     NavigationModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [ContactFormService],
   bootstrap: [AppComponent]
