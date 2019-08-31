@@ -13,6 +13,7 @@ install:
   - npm install -g codecov # install codecov uploader
   - npm install -g semantic-release # install semantic-release generator
   - npm install # install project dependencies
+  - cd functions && npm install && cd .. # install cloud function dependencies
 before_script:
   - .travis/skip_on_readme.sh || travis_terminate 1 # bail out if the only files changes were .md* files
   - npm run lintonly || travis_terminate 1 # ensure files pass linting
@@ -25,8 +26,6 @@ after_success:
   - npm run coverage # upload coverage results to Codacy
   - codecov # upload coverage results to Codecov
   - rm -rf coverage # remove coverage directory before deploying
-# before_deploy:
-#   - semantic-release # release a new version semantically
 deploy: # on success, deploy to Firebase hosting
   skip_cleanup: true
   provider: firebase
