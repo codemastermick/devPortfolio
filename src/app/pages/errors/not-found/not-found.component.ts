@@ -7,7 +7,8 @@ const errors = [
   "Something went wrong",
   "It broke!",
   "Whoops!",
-  "There may be a typo here..."
+  "Did the typo goblin strike again?",
+  "Well this is embarassing..."
 ]; // Add more error messages if desired
 
 @Component({
