@@ -1,3 +1,7 @@
+if (process.env.FUNCTIONS_EMULATOR) {
+  process.env.GOOGLE_APPLICATION_CREDENTIALS = "Z:\\Projects\\devPortfolio\\key.json"
+}
+
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 import * as express from "express";
@@ -41,6 +45,7 @@ exports.alerter = functions.firestore
       text: formatMessageBody(change)
     };
 
+    console.log(JSON.stringify(mailOptions));
     try {
       await mailTransport.sendMail(mailOptions);
       console.log("Work notice sent!");
