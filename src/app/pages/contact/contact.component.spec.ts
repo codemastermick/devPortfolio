@@ -73,12 +73,13 @@ describe("ContactComponent", () => {
     component.email.setValue(mock.email);
     component.message.setValue(mock.message);
 
-    spyOn(service, "uploadMessage");
+    spyOn(component, "submit");
 
-    component.submit();
+    const button = fixture.debugElement.nativeElement.querySelector("button");
+    button.click();
     fixture.detectChanges();
 
-    expect(service.uploadMessage).toHaveBeenCalled();
+    expect(component.submit).toHaveBeenCalled();
   });
 
   // BEGIN NAME TESTS
