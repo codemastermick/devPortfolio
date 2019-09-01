@@ -6,8 +6,12 @@
     <a href="https://www.linkedin.com/in/mick-evans-0604291a/">LinkedIn</a>
   </div>
 
-  <div>
-    <p>© Copyright {{ datestamp }} {{ author }}</p>
+  <div fxHide.lt-md>
+    <p>Copyright {{ datestamp }} {{ author }}</p>
   </div>
+
+  <div fxHide.gt-sm>
+      <p>© {{ datestamp }} {{ author }}</p>
+    </div>
 
 </mat-toolbar>
