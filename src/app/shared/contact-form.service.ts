@@ -11,12 +11,10 @@ export class ContactFormService {
   constructor(private http: HttpClient) { }
 
   uploadMessage(name: string, email: string, message: string) {
-    if (name && email && message) {
       this.http.put(this.ENDPOINT, { name, email, message }).toPromise().then(res => {
         return `${JSON.stringify(res)}`;
       }).catch(err => {
         return err;
       });
-    }
   }
 }
