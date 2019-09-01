@@ -25,7 +25,6 @@ const badMock = {
 describe("ContactComponent", () => {
   let component: ContactComponent;
   let fixture: ComponentFixture<ContactComponent>;
-  // tslint:disable-next-line: prefer-const
   let service: ContactFormService;
 
   beforeEach(async(() => {
@@ -74,12 +73,13 @@ describe("ContactComponent", () => {
     component.message.setValue(mock.message);
 
     spyOn(component, "submit");
+    // spyOn(service, "uploadMessage");
 
     const button = fixture.debugElement.nativeElement.querySelector("button");
     button.click();
     fixture.detectChanges();
-
     expect(component.submit).toHaveBeenCalled();
+    // expect(service.uploadMessage).toHaveBeenCalled();
   });
 
   // BEGIN NAME TESTS
