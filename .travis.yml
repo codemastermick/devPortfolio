@@ -12,8 +12,9 @@ install:
   - npm install -g @angular/cli # install ng cli
   - npm install -g codecov # install codecov uploader
   - npm install -g semantic-release # install semantic-release generator
-  - npm install -g firebase-tools
-  - npm install -g codacy-coverage
+  - npm install -g firebase-tools # needed to deploy functions correctly
+  - npm install -g codacy-coverage # codacy coverage uploader
+  - npm install -g auto-changelog # automatic changelogging
   - npm install # install project dependencies
   - cd functions && npm install && cd .. # install cloud function dependencies
 before_script:
