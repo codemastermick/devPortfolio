@@ -13,9 +13,9 @@ export class ContactFormService {
   uploadMessage(name: string, email: string, message: string) {
     if (name && email && message) {
       this.http.put(this.ENDPOINT, { name, email, message }).toPromise().then(res => {
-        return `Uploaded message with UID ${JSON.stringify(res)}`;
+        return `${JSON.stringify(res)}`;
       }).catch(err => {
-        throw new Error(err);
+        return err;
       });
     }
   }
