@@ -1,8 +1,9 @@
 <div class="container" fxLayout="column">
   <div fxLayout fxLayoutAlign="space-between center" class="logoHolder">
-    &nbsp; <!-- This is to put a touch of space between the logo and the title -->
-    <img src="../assets/logo.webp" alt="Site logo" class="logo" />
-    <h1>{{ title }}</h1>
+    <h1>
+      <img src="https://icon-library.net//images/binary-icon/binary-icon-2.jpg" alt="Site logo" class="logo" />
+      {{ title }}
+    </h1>
   </div>
   <mat-sidenav-container class="mainpage">
     <mat-sidenav #sidenav role="navigation">
@@ -15,3 +16,5 @@
   </mat-sidenav-container>
   <app-footer [foundingYear]="foundingYear" [author]="author" fxFlexOffset="auto"></app-footer>
 </div>
+
+<!-- <img src="https://icon-library.net//images/binary-icon/binary-icon-2.jpg" width="350" /> -->

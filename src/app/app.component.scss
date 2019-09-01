@@ -1,44 +1,42 @@
-// .container {
-//   min-height: 80vh;
-// }
+.container {
+  // min-height: 80vh;
+  // background-color: black; // set this to the primary app colour
+  // color: white; // set this to the primary app text colour
+}
 
-h1 {
+.container > .logoHolder > h1 {
   font-size: 2.5em;
+}
+
+.container > .logoHolder > h1 > .logo {
+  max-height: 2.5em;
+  margin-left: 0.5em;
+  border-radius: 64px;
+}
+
+.container > .logoHolder {
+  max-height: 110px;
 }
 
 mat-sidenav-container,
 mat-sidenav-content,
 mat-sidenav {
   // pick up theme colour here maybe?
-  height: 80vh;
+  height: 85vh;
 }
 
 mat-sidenav {
   width: 250px;
 }
 
-.logo {
-  max-height: 10vh;
-  margin-top: 1em;
-}
-
-// .logoHolder {
-//   background-color: black;
-//   color: white;
-// }
-
 .bgimg {
   display: block;
-  height: 80vh;
+  // height: 80vh;
   // background: url("../assets/img/background.webp") no-repeat center center fixed;
   background-size: cover;
 }
 
 .mainpage {
-  height: 80%;
+  // height: 80%;
   overflow: auto;
 }
-
-// .toast-container{
-//   color: whitesmoke;
-// }
