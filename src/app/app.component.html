@@ -1,11 +1,10 @@
 <div class="container" fxLayout="column">
   <div class="logoHolder">
     <h1>
-      <img src="../assets/img/logo.webp" alt="Site logo" class="logo" />
       {{ title }}
-      <img src="../assets/img/logo.webp" alt="Site logo" class="logo" />
     </h1>
   </div>
+
   <mat-sidenav-container class="mainpage">
     <mat-sidenav #sidenav role="navigation">
       <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
