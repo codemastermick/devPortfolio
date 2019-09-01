@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api_base_url: "http://localhost:5000/dev-profile-cd9ed/us-central1/api"
+  baseUrl: "http://localhost:5000/dev-profile-cd9ed/us-central1/api"
 };
 
 /*

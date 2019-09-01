@@ -5,7 +5,7 @@ import { environment } from "../../environments/environment";
   providedIn: "root"
 })
 export class ContactFormService {
-  BASE_URL = environment.api_base_url;
+  BASE_URL = environment.baseUrl;
   ENDPOINT = `${this.BASE_URL}/contact`;
 
   constructor(private http: HttpClient) { }
