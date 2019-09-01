@@ -82,6 +82,15 @@ describe("ContactComponent", () => {
     // expect(service.uploadMessage).toHaveBeenCalled();
   });
 
+  it("should upload a message on submit", async () => {
+    component.name.setValue(mock.name);
+    component.email.setValue(mock.email);
+    component.message.setValue(mock.message);
+    const spy = spyOn(service, "uploadMessage");
+    await component.submit();
+    expect(spy).toHaveBeenCalled();
+  });
+
   // BEGIN NAME TESTS
   it("should error without a name", () => {
     expect(component.name.valid).toBeFalsy();
