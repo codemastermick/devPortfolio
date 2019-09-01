@@ -28,5 +28,6 @@ describe("ContactFormService", () => {
     const spy = spyOn(service, "uploadMessage");
     await service.uploadMessage(mock.name, mock.email, mock.message);
     expect(spy).toHaveBeenCalled();
+    expect(typeof(spy)).toBe(typeof(Object));
   });
 });
