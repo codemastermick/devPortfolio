@@ -2,13 +2,17 @@
   <div fxHide.gt-sm>
     <button mat-icon-button (click)="onToggleSidenav()" aria-label="Home">
       <mat-icon>menu</mat-icon>
+      <a routerLink="/home">Home</a>
     </button>
   </div>
-  <div>
-    <a routerLink="/home">Home</a>
-  </div>
-  <div fxFlex fxLayout fxLayoutAlign="space-evenly" fxHide.lt-md>
-    <ul fxLayout fxLayoutAlign="space-evenly" fxLayoutGap="10vw" class="navigation-items">
+
+  <div fxFlex fxHide.lt-md>
+    <ul fxLayout fxLayoutAlign="space-between" class="navigation-items">
+      <li>
+        <button mat-icon-button>
+          <a routerLink="/home">Home</a>
+        </button>
+      </li>
       <li>
         <button mat-icon-button>
           <a routerLink="/about">About Me</a>
