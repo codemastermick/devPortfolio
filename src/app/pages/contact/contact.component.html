@@ -2,24 +2,26 @@
   {{tagline}}
 </h2>
 
-<div class="example-container">
-  <mat-form-field>
-    <input matInput placeholder="Enter your name" [formControl]="name" required>
-    <mat-error *ngIf="name.invalid">{{getNameErrorMessage()}}</mat-error>
-  </mat-form-field>
+<mat-card>
+    <div class="example-container">
+        <mat-form-field>
+          <input matInput placeholder="Enter your name" [formControl]="name" required>
+          <mat-error *ngIf="name.invalid">{{getNameErrorMessage()}}</mat-error>
+        </mat-form-field>
 
-  <mat-form-field>
-    <input matInput placeholder="Enter your email" [formControl]="email" required>
-    <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
-  </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Enter your email" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+        </mat-form-field>
 
-  <mat-form-field>
-    <input matInput placeholder="What do you need?" [formControl]="message" required>
-    <mat-error *ngIf="message.invalid">{{getMsgErrorMessage()}}</mat-error>
-  </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="What do you need?" [formControl]="message" required>
+          <mat-error *ngIf="message.invalid">{{getMsgErrorMessage()}}</mat-error>
+        </mat-form-field>
 
-  <p>
-    <i>* Required field</i>
-  </p>
-  <button (click)="submit()">Submit</button>
-</div>
+        <p>
+          <i>* Required field</i>
+        </p>
+        <button (click)="submit()">Submit</button>
+      </div>
+</mat-card>

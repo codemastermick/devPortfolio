@@ -11,7 +11,9 @@
     </mat-sidenav>
     <mat-sidenav-content class="bgimg">
       <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
-      <router-outlet></router-outlet>
+      <div class="pageBody">
+        <router-outlet></router-outlet>
+      </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
   <app-footer [foundingYear]="foundingYear" [author]="author" fxFlexOffset="auto"></app-footer>
