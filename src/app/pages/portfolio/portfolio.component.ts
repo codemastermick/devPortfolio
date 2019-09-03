@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
 import { Title, Meta } from "@angular/platform-browser";
 
 const taglines = [
-  "Here is some stuff I've made",
+  "Here is some stuff I've made recently",
   "You wanted to see some actual code at work?",
   "Things made by me"
 ];
