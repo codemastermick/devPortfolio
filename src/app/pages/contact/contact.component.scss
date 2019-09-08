@@ -1,8 +1,9 @@
-.example-container {
+.form-holder {
   display: flex;
   flex-direction: column;
 }
 
-.example-container > * {
-  width: 100%;
+.form-holder > button {
+  width: 40%;
+  align-self: center;
 }
