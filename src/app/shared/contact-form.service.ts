@@ -11,6 +11,10 @@ export class ContactFormService {
   constructor(private http: HttpClient) { }
 
   uploadMessage(name: string, email: string, message: string) {
+    if (environment.production) {
       return this.http.put(this.ENDPOINT, { name, email, message }).toPromise();
+    } else {
+      console.log("Skipping sending message because of local environment");
+    }
   }
 }
