@@ -143,19 +143,19 @@ $mat-dark-theme-background: (
 // Theme Config
 
 body {
-  --primary-color: #162a7c;
-  --primary-lighter-color: #b9bfd8;
-  --primary-darker-color: #0c195f;
+  --primary-color: #59669d;
+  --primary-lighter-color: #cdd1e2;
+  --primary-darker-color: #3e4981;
   --text-primary-color: $light-primary-text;
   --text-primary-lighter-color: $dark-primary-text;
   --text-primary-darker-color: $light-primary-text;
 }
 
 $mat-primary: (
-  main: #162a7c,
-  lighter: #b9bfd8,
-  darker: #0c195f,
-  200: #162a7c, // For slide toggle,
+  main: #59669d,
+  lighter: #cdd1e2,
+  darker: #3e4981,
+  200: #59669d, // For slide toggle,
   contrast : (
     main: $light-primary-text,
     lighter: $dark-primary-text,
@@ -165,23 +165,23 @@ $mat-primary: (
 $theme-primary: mat-palette($mat-primary, main, lighter, darker);
 
 body {
-  --accent-color: #474646;
-  --accent-lighter-color: #c8c8c8;
-  --accent-darker-color: #2f2f2f;
-  --text-accent-color: $light-primary-text;
+  --accent-color: #bab8b8;
+  --accent-lighter-color: #eaeaea;
+  --accent-darker-color: #a3a0a0;
+  --text-accent-color: $dark-primary-text;
   --text-accent-lighter-color: $dark-primary-text;
-  --text-accent-darker-color: $light-primary-text;
+  --text-accent-darker-color: $dark-primary-text;
 }
 
 $mat-accent: (
-  main: #474646,
-  lighter: #c8c8c8,
-  darker: #2f2f2f,
-  200: #474646, // For slide toggle,
+  main: #bab8b8,
+  lighter: #eaeaea,
+  darker: #a3a0a0,
+  200: #bab8b8, // For slide toggle,
   contrast : (
-    main: $light-primary-text,
+    main: $dark-primary-text,
     lighter: $dark-primary-text,
-    darker: $light-primary-text,
+    darker: $dark-primary-text,
   )
 );
 $theme-accent: mat-palette($mat-accent, main, lighter, darker);
@@ -208,8 +208,8 @@ $mat-warn: (
 );
 $theme-warn: mat-palette($mat-warn, main, lighter, darker);;
 
-$theme: mat-dark-theme($theme-primary, $theme-accent, $theme-warn);
-$altTheme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
+$theme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
+$altTheme: mat-dark-theme($theme-primary, $theme-accent, $theme-warn);
 
 // Theme Init
 @include angular-material-theme($theme);
