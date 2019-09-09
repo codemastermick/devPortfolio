@@ -66,6 +66,9 @@ export class ContactComponent implements OnInit {
   }
 
   submit() {
+    this.name.reset();
+    this.email.reset();
+    this.message.reset();
     return this.contact.uploadMessage(this.name.value, this.email.value, this.message.value);
   }
 }
