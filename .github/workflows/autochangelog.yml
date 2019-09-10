@@ -20,9 +20,11 @@ jobs:
     - name: Install dependencies
       run: |
         npm install -g auto-changelog
-    - name: Generate changelog
+    - name: Generate changelog and commit
       run: |
         npm run version
+        git config --global user.name GitHub Actions
+        git config --global user.email github@github.com
         git push origin HEAD:master
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
