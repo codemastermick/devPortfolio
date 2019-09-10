@@ -22,7 +22,7 @@ jobs:
         npm install -g auto-changelog
     - name: Login to GitHub
       run: |
-        git config --global user.name GitHub Actions
+        git config --global user.name GitHub
         git config --global user.email github@github.com
     - name: Generate changelog
       run: |
