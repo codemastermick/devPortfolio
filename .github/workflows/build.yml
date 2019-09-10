@@ -1,15 +1,16 @@
-name: Automatic Changelog
+name: Build Project
 
 on: [push]
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
-        node-version: [10.x]
+        node-version: [10.x, 12.x]
+        os: [ubuntu-latest, windows-latest]
 
     steps:
     - uses: actions/checkout@v1
@@ -19,12 +20,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install dependencies
       run: |
-        npm install -g auto-changelog
-    - name: Generate changelog
+        npm install
+    - name: Build Angular app
       run: |
-        npm run version
-        git config user.name GitHub Actions
-        git config user.email github@github.com
-        git push origin HEAD:master
+        npm run build:prod
       env:
         CI: true

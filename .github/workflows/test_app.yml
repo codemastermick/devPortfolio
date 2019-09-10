@@ -1,4 +1,4 @@
-name: Node CI
+name: Test Angular App
 
 on: [push]
 
@@ -18,10 +18,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Build and test app
+    - name: Run unit tests
       run: |
         npm install
-        npm run build:prod
         npm run test:ci
       env:
         CI: true
