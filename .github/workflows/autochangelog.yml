@@ -1,4 +1,4 @@
-name: Node CI
+name: Automatic Changelog
 
 on: [push]
 
@@ -17,12 +17,16 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Build and test app
+    - name: Install dependencies
       run: |
         npm install
         npm install -g auto-changelog
+    - name: Build and test
+      run: |
         npm run build:prod
         npm run test:ci
+    - name: Generate changelog
+      run: |
         npm run version
         git push
       env:
