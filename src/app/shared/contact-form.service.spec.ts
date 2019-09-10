@@ -1,7 +1,7 @@
 import { TestBed } from "@angular/core/testing";
 
 import { ContactFormService } from "./contact-form.service";
-import { HttpClientModule, HttpErrorResponse } from "@angular/common/http";
+import { HttpClientModule } from "@angular/common/http";
 
 const mock = {
   name: "Demo Bob",
