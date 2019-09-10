@@ -28,6 +28,6 @@ jobs:
     - name: Generate changelog
       run: |
         npm run version
-        git push
+        git push origin HEAD:master
       env:
         CI: true
