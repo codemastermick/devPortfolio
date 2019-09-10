@@ -23,8 +23,8 @@ jobs:
     - name: Generate changelog
       run: |
         npm run version
-        git config user.name GitHub Actions
-        git config user.email github@github.com
+        git config --global user.name GitHub Actions
+        git config --global user.email github@github.com
         git push origin HEAD:master
       env:
         CI: true
