@@ -4,17 +4,24 @@
 }
 
 .container > .logoHolder {
-  max-height: 11%;
+  // max-height: 11%;
+  display: flex;
 }
 
 .container > .logoHolder > h1 {
   font-size: 2.5em;
   text-align: center;
   min-height: 100%;
+  // flex: 1 1 auto;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .container > .logoHolder > .logo {
-  max-height: 10vh;
+  max-height: 20vh;
   margin-left: 0.5em;
   margin-right: 0.5em;
   border-radius: 50%;
