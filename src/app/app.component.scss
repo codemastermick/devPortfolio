@@ -4,7 +4,7 @@
 }
 
 .container > .logoHolder {
-  // max-height: 11%;
+  max-height: 10vh;
   display: flex;
 }
 
@@ -21,10 +21,12 @@
 }
 
 .container > .logoHolder > .logo {
-  max-height: 20vh;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  border-radius: 50%;
+  // max-height: 100%;
+  // margin-left: 0.5em;
+  // margin-right: 0.5em;
+  // border-radius: 50%;
+  // width: 250px;
+  // height: 250px;
 }
 
 mat-sidenav-container,
