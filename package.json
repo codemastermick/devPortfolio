@@ -44,7 +44,7 @@
     "@types/jasmine": "~3.4.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "12.7.12",
-    "auto-changelog": "^1.14.1",
+    "auto-changelog": "^1.16.3",
     "codacy-coverage": "^3.4.0",
     "codelyzer": "^5.0.0",
     "commitizen": "^4.0.3",
