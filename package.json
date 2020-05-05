@@ -47,7 +47,7 @@
     "auto-changelog": "^1.14.1",
     "codacy-coverage": "^3.4.0",
     "codelyzer": "^5.0.0",
-    "commitizen": "^4.0.3",
+    "commitizen": "^4.1.1",
     "cz-conventional-changelog": "^3.0.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
